@@ -1,0 +1,34 @@
+.card-container {
+  margin-top: -1em;
+  padding: 0em 2em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15px;
+  text-align: center;
+  position: absolute;
+}
+
+.card {
+  width: 100%;
+}
+
+.img-card {
+  width: 100%;
+}
+
+.movie-title {
+  color: rgba(255, 255, 240, 0.774);
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+  }
+
+  .movie-title {
+    font-size: 12px;
+  }
+}

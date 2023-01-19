@@ -1,0 +1,257 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+}
+
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: 0.5s;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.logo {
+  color: crimson;
+  padding-right: 0.5rem;
+}
+
+.nav-menu li {
+  margin-top: 10px;
+  padding: 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 300ms;
+  cursor: pointer;
+}
+
+.nav-menu li:hover {
+  color: white;
+  transition: all 0.2s ease;
+  text-decoration-color: white;
+  text-shadow: rgb(121, 108, 111) 0.1em 0.1em 0.2em;
+}
+
+.nav-login {
+  display: flex;
+}
+
+.hamburguer {
+  display: none;
+}
+
+.nav-icon {
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.nav-icon:hover {
+  color: crimson;
+  transition: all 0.2s ease;
+}
+
+.foto-perfil {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/*{SUBMENU}*/
+.sub-menu {
+  display: none;
+}
+
+.children {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 15%;
+  margin-top: 10px;
+  background-color: rgba(34, 34, 34, 0.479);
+  border-bottom: 2.5px solid white;
+  border-top: 2.5px solid white;
+}
+
+.children .sub-li {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-size: 0.9rem;
+  color: white;
+  text-shadow: none;
+}
+
+.children .sub-li:hover {
+  color: crimson;
+  font-weight: bolder;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+/*{ICONOS}*/
+.material-icons {
+  font-family: "Material Icons";
+  margin-top: 1px;
+  float: right;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.1rem;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+/*{SUB-MENU DE MI CUENTA}*/
+
+.cuenta-menu {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100vh;
+  background-color: rgba(17, 17, 17, 0.959);
+  border-left: ivory solid 2px;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  z-index: 0;
+  transition: 0.3s;
+}
+
+.aca {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.sub-perfil {
+  color: #ffffff;
+  padding-bottom: 0.7rem;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sub-perfil:hover {
+  color: crimson;
+  transition: all 0.2s ease;
+}
+
+.close-perfil {
+  margin-top: 10px;
+  margin-right: 5px;
+  float: right;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 740px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: left;
+    padding-top: 10rem;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 1; /*{Para que este encima de .cuenta-menu que tiene 0 de z-index aca puse 1 mas}*/
+    transition: 0.3s;
+  }
+
+  .nav-menu li {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    padding-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburguer {
+    display: initial;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-menu li .sub-menu {
+    display: none;
+  }
+
+  .children {
+    display: block;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #222;
+    border-bottom: 2.5px solid white;
+    border-top: 2.5px solid white;
+  }
+
+  .children .sub-li {
+    display: block;
+    overflow: hidden;
+    padding: 0.2rem 0em;
+    color: white;
+    margin-left: 1em;
+    font-size: 0.9rem;
+  }
+
+  .cuenta-menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, 0.959);
+    border-left: ivory solid 2px;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    z-index: 0;
+    transition: 0.3s;
+  }
+
+  /*{HOVERS}*/
+
+  .nav-menu li {
+    text-decoration: none;
+    transition: none;
+  }
+
+  .nav-menu li:hover {
+    color: white;
+    transition: none;
+    text-decoration-color: none;
+    text-shadow: none;
+  }
+
+  .sub-perfil:hover {
+    color: crimson;
+    transition: all 0.2s ease;
+  }
+}

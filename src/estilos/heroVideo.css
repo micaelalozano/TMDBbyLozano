@@ -1,0 +1,74 @@
+.mask {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.into-video {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.mask::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+}
+
+.hero .content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 51%;
+  left: 50%;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 70px;
+  margin-bottom: 0.3rem;
+  color: white;
+}
+
+.btn-explorar {
+  padding: 0.25rem 1.5rem;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border-radius: 20px;
+  border: 3px solid white;
+  background-color: rgba(255, 255, 255, 0.164);
+  cursor: pointer;
+}
+
+.btn-explorar:hover {
+  background-color: rgba(12, 11, 11, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 740px) {
+  .titulo {
+    font-size: 55px;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  .btn-explorar {
+    padding: 0.3rem 1rem;
+    font-size: 15px;
+  }
+}

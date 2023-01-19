@@ -1,0 +1,153 @@
+.mask-dos {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+}
+
+.mask-dos::after {
+  content: "";
+  width: 100%;
+  height: 85vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0px -4em 3em 0px #111;
+}
+
+.into-video {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.hero-dos .content-dos {
+  width: 35%;
+  position: absolute;
+  transform: translate(0, -40%);
+  top: 50%;
+  left: 2rem;
+}
+
+.movie {
+  font-size: 55px;
+  margin-bottom: 5px;
+  color: ivory;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.movie-desc {
+  font-size: 16px;
+  margin-bottom: 13px;
+  color: ivory;
+}
+
+.search-icon {
+  margin-top: 2px;
+  color: ivory;
+}
+
+.form-search {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-input {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: none;
+  width: 55%;
+  font-size: 15px;
+  padding: 2px 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 240, 0.315);
+  outline: none;
+}
+
+.btn-search {
+  border: 2px solid black;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: #111;
+}
+
+@media screen and (max-width: 800px) {
+  .hero-dos .content-dos {
+    width: 70%;
+  }
+
+  .search-input {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: none;
+    width: 55%;
+    font-size: 15px;
+    padding: 5px;
+    color: black;
+    background-color: rgba(255, 255, 240, 0.315);
+    outline: none;
+  }
+
+  .movie {
+    font-size: 45px;
+  }
+
+  .movie-desc {
+    font-size: 15px;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 0px 5px;
+  }
+
+  .btn-search {
+    border: 2px solid black;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mask-dos {
+    width: 100%;
+    height: 65vh;
+    position: relative;
+  }
+
+  .mask-dos::after {
+    content: "";
+    width: 100%;
+    height: 65vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0px -5em 3em 0px #111;
+  }
+
+  .hero-dos .content-dos {
+    width: 70%;
+    transform: translate(0, -40%);
+    top: 44%;
+  }
+
+  .movie {
+    font-size: 40px;
+  }
+
+  .movie-desc {
+    font-size: 14px;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 0px 5px;
+  }
+
+  .search-input {
+    width: 60%;
+  }
+}

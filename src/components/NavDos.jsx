@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 //Estilos
-import "../estilos/navbar.css";
+import "../estilos/navDos.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LoginIcon from "@mui/icons-material/Login";
 
@@ -21,17 +21,6 @@ const Navbar = () => {
 
   const [click4, setClick4] = useState(false);
   const handleClick4 = () => setClick4(!click4);
-
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 10) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
-
-  window.addEventListener("scroll", changeColor);
 
   useEffect(() => {
     axios
@@ -66,7 +55,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={color ? "header header-bg" : "header"}>
+      <div className="header-dos">
         <div className="hamburguer" onClick={handleClick}>
           {click ? (
             <FaTimes size={23} style={{ color: "#dc143c" }} />
@@ -84,42 +73,42 @@ const Navbar = () => {
 
           <li onClick={handleClickDos}>
             Peliculas <span className="material-icons">expand_more</span>
-            <ul className={clickDos ? "children" : "sub-menu"}>
+            <ul className={clickDos ? "children-dos" : "sub-menu"}>
               <Link to="/productos">
-                <li className="sub-li">Ver todo</li>
+                <li className="sub-li-dos">Ver todo</li>
               </Link>
               <Link to="/accion">
-                <li className="sub-li">Accion</li>
+                <li className="sub-li-dos">Accion</li>
               </Link>
               <Link to="/sweaters">
-                <li className="sub-li">Comedias</li>
+                <li className="sub-li-dos">Comedias</li>
               </Link>
               <Link to="/pantalones">
-                <li className="sub-li">Dramas</li>
+                <li className="sub-li-dos">Dramas</li>
               </Link>
               <Link to="/vestidos">
-                <li className="sub-li">Terror</li>
+                <li className="sub-li-dos">Terror</li>
               </Link>
             </ul>
           </li>
 
           <li onClick={handleClickTres}>
             Series <span className="material-icons">expand_more</span>
-            <ul className={clickTres ? "children" : "sub-menu"}>
+            <ul className={clickTres ? "children-dos" : "sub-menu"}>
               <Link to="/productos">
-                <li className="sub-li">Ver todo</li>
+                <li className="sub-li-dos">Ver todo</li>
               </Link>
               <Link to="/accion">
-                <li className="sub-li">Accion</li>
+                <li className="sub-li-dos">Accion</li>
               </Link>
               <Link to="/sweaters">
-                <li className="sub-li">Comedias</li>
+                <li className="sub-li-dos">Comedias</li>
               </Link>
               <Link to="/pantalones">
-                <li className="sub-li">Dramas</li>
+                <li className="sub-li-dos">Dramas</li>
               </Link>
               <Link to="/vestidos">
-                <li className="sub-li">Terror</li>
+                <li className="sub-li-dos">Terror</li>
               </Link>
             </ul>
           </li>

@@ -6,7 +6,7 @@ import Inicio from "./pages/Inicio";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Micuenta from "./pages/Micuenta";
-import Tr from "./pages/Tr";
+import Miperfil from "./pages/Miperfil";
 
 const App = () => {
 const [user, setUser] = useState({});
@@ -26,11 +26,11 @@ const [user, setUser] = useState({});
     <>
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/explorar" element={<Explorar />} />
+        <Route path="/browse" element={<Explorar />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/mi_cuenta/:user_name" element={<Micuenta />} />
-        <Route path="/cambiar_foto_perfil/:username_id" element={<Tr />} />
+        <Route path="/mi_cuenta/:username" element={<Micuenta />} />
+        <Route path="/cambiar_foto_perfil/:user_id" element={<Miperfil />} />
       </Routes>
       
     </>

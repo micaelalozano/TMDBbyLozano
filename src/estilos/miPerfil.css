@@ -1,11 +1,11 @@
-.hero-img {
+.mi-fotoperfil {
   width: 100%;
   background: rgba(0, 0, 0, 0.041);
   height: 100vh;
   position: relative;
 }
 
-.hero-img::after {
+.mi-fotoperfil::after {
   content: "";
   background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDw0NDQ8NDQ0NDQ0NDQ0NDQ8NDw0NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0PEisZFRkrKysrKysrKysrKystKysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKwBJgMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAIhABAQACAAQHAAAAAAAAAAAAAAERIQJBgfEiMVFhcbHw/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO4gAAAlvlrr6KAAAAJICgAAAAAAAAAAAAAAAM8XFZeHEtluLczw6tzfrq0AAAAAAAAAAAAAAAAAAAAAAAAAAAAACZ7qAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJfZQAAAAAgAAAAAAAAAAAAAAAAAACfvlQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAJYCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAARQAAAAAAAAAAAAEwoAAAACSqAAAAAAAAAAAAAAAAAAAAAAAAAAAAACXPLW5yzrKgAAAAAAAAAAAAAAAmFAAAAAAAABKoAAAAA//Z");
   background-size: cover;
@@ -18,88 +18,80 @@
   z-index: -1;
 }
 
-.hero-img .content {
+.content-perfil {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   text-align: center;
-  width: 40%;
-  -webkit-box-shadow: 15px 15px 17px -6px rgba(143, 137, 143, 1);
-  -moz-box-shadow: 15px 15px 17px -6px rgba(143, 137, 143, 1);
-  box-shadow: 15px 15px 17px -6px rgba(143, 137, 143, 1);
+  width: 30%;
+  -webkit-box-shadow: 0px 0px 96px 8px rgba(143, 137, 143, 1);
+  -moz-box-shadow: 0px 0px 96px 8px rgba(143, 137, 143, 1);
+  box-shadow: 0px 0px 96px 8px rgba(143, 137, 143, 1);
 }
 
-.left-detalle {
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.img1 {
-  height: 100%;
-  width: 100%;
-  border-top: 4px solid crimson;
-  border-bottom: 4px solid crimson;
-}
-
-.right-detalle {
-  padding: 1em;
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #222;
-  border-bottom: 4px solid crimson;
-}
-
-.mi_cuenta {
+.cambiar-foto {
+  color: ivory;
+  font-weight: 600;
   margin-bottom: 20px;
-  color: grey;
 }
 
-.mis_datos {
-  padding-bottom: 20px;
-  font-size: 14px;
-  color: rgba(255, 255, 240, 0.726);
-  font-weight: 500;
+.input-imagen {
+  border-radius: 5px;
+  border: 2px solid crimson;
+  background-color: #222;
+  padding: 3em;
 }
 
-.btn-foto-perfil {
+.input-url {
+  margin-bottom: 20px;
+}
+
+.item-1 {
+  width: 90%;
+  text-align: center;
+  padding: 0.3em;
+  background-color: rgba(255, 255, 240, 0.356);
+  border: 2px solid ivory;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-aceptar {
   border: none;
   padding: 0.5em;
   font-size: 13px;
-  background-color: rgba(255, 255, 240, 0.212);
-  border-top: 1px solid ivory;
-  border-bottom: 1px solid ivory;
+  font-weight: 500;
+  background-color: rgba(255, 255, 240, 0.11);
+  border-bottom: 3px solid ivory;
   color: ivory;
   cursor: pointer;
 }
 
-.btn-foto-perfil:hover {
+.btn-aceptar:hover {
   border: none;
   padding: 0.5em;
   font-size: 13px;
-  background-color: rgba(255, 255, 240, 0.212);
-  border-top: 1px solid crimson;
-  border-bottom: 1px solid crimson;
-  color: ivory;
+  font-weight: 500;
+  background-color: transparent;
+  border-bottom: 3px solid crimson;
+  color: crimson;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 740px) {
-  .hero-img .content {
-    width: 80%;
+  .content-perfil {
+    width: 90%;
   }
 
-  .mi_cuenta {
-    margin-bottom: 20px;
-    color: grey;
+  .item-1 {
+    width: 100%;
   }
 
-  .mis_datos {
-    font-size: 0.8rem;
+  .btn-aceptar {
+   
+    font-size: 12px;
+    font-weight: 500;
+   
   }
 }

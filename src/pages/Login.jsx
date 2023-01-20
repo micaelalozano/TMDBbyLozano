@@ -42,7 +42,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/api/users/login", { email, password }, { withCredentials: true })
+      .post("/api/users/login", { username, password }, { withCredentials: true })
       .then((res) => res.data)
       .then(() => {
         navigate("/explorar");

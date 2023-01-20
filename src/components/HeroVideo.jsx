@@ -13,7 +13,7 @@ const HeroVideo = () => {
         </div>
         <div className="content">
           <h1 className="titulo">Bienvenido</h1>
-          <Link to="/explorar">
+          <Link to="/browse">
             <button className="btn-explorar">Explorar</button>
           </Link>
         </div>

@@ -47,6 +47,7 @@ const Register = () => {
     e.preventDefault();
     axios
       .post("api/users", {
+        username: username,
         name: name,
         lastname: lastname,
         email: email,
@@ -58,7 +59,7 @@ const Register = () => {
         navigate("/login");
       });
   };
-  console.log("esto es", name, lastname, email, password, imagen);
+  console.log("esto es", username, name, lastname, email, password, imagen);
 
   return (
     <>

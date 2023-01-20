@@ -1,0 +1,46 @@
+.cont-foot {
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    height: 70px;
+  }
+  
+  .h4 {
+    color: tan;
+  }
+  .me {
+    color: white;
+    font-size: smaller;
+    font-weight: 800;
+  }
+  
+  .contenedor-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contenedor-icons .lis {
+    padding: 0 0.5rem;
+  }
+  
+  .contenedor-icons .lis {
+    font-weight: 600;
+    color: white;
+  }
+  
+  .contenedor-icons .lis a:hover {
+      color: tan;
+      transition: all 0.2s ease;
+    }
+  
+  @media screen and (max-width: 700px) {
+    .contenedor-foot {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  

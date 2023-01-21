@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import HeroVideo2 from "../components/HeroVideo2";
+import HeroVotadas from "../components/HeroVotadas";
 import Navbar from "../components/Navbar";
 //Estilos
-import "../estilos/explorar.css";
+import "../estilos/heroVotadas.css";
 
-//API KEY : 376830c4b1497d750fd04c4edae8fe3c
-
-const Explorar = () => {
+const MovieLIst = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -25,9 +23,9 @@ const Explorar = () => {
   return (
     <>
       <Navbar />
-      <HeroVideo2 />
+      <HeroVotadas heading="PELÍCULAS" />
       <ul>
-        <div className="card-container">
+        <div className="card-container-vot">
           {movies.map(function (e, i) {
             return (
               <li key={i}>
@@ -40,8 +38,8 @@ const Explorar = () => {
                       }
                       alt="Poster Pelicula"
                     />
-                    <p className="movie-title"> {e.original_title} </p>
-                  </div>{" "}
+                    <p className="movievot-title"> {e.original_title} </p>
+                  </div>
                 </Link>
               </li>
             );
@@ -52,4 +50,4 @@ const Explorar = () => {
   );
 };
 
-export default Explorar;
+export default MovieLIst;

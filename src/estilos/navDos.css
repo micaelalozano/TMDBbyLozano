@@ -76,7 +76,7 @@
   background-color: rgba(34, 34, 34, 0.767);
   border-bottom: 3px solid crimson;
   border-top: 2.5px solid crimson;
-  z-index: 1;
+  z-index: 2;
 }
 
 .children-dos .sub-li-dos {
@@ -125,7 +125,7 @@
   position: absolute;
   top: 0;
   right: 0%;
-  z-index: 0;
+  z-index: 2;
   transition: 0.3s;
 }
 

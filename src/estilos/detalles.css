@@ -1,0 +1,58 @@
+.todo-contenedor {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.todo-contenedor::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(35px);
+  z-index: 0;
+}
+
+.fondo-detail {
+  width: 100%;
+  height: 100%;
+}
+
+.detail-contenedor {
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  margin-top: 1em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: aqua;
+  z-index: 1;
+}
+
+.left-detail {
+  max-width: 100%;
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.right-detail {
+  max-width: 100%;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+@media screen and (max-width: 740px) {
+  .detail-contenedor {
+    grid-template-columns: 1fr;
+  }
+}

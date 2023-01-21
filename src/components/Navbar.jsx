@@ -83,22 +83,19 @@ const Navbar = () => {
           </li>
 
           <li onClick={handleClickDos}>
-            Peliculas <span className="material-icons">expand_more</span>
+            Películas <span className="material-icons">expand_more</span>
             <ul className={clickDos ? "children" : "sub-menu"}>
-              <Link to="/productos">
+              <Link to="/todo_en_peliculas">
                 <li className="sub-li">Ver todo</li>
               </Link>
-              <Link to="/accion">
-                <li className="sub-li">Accion</li>
+              <Link to="/cartelera">
+                <li className="sub-li">En cartelera hoy</li>
               </Link>
-              <Link to="/sweaters">
-                <li className="sub-li">Comedias</li>
+              <Link to="/proximamente">
+                <li className="sub-li">Proximamente</li>
               </Link>
-              <Link to="/pantalones">
-                <li className="sub-li">Dramas</li>
-              </Link>
-              <Link to="/vestidos">
-                <li className="sub-li">Terror</li>
+              <Link to="/mas_valoradas">
+                <li className="sub-li">Mas valoradas</li>
               </Link>
             </ul>
           </li>
@@ -106,25 +103,22 @@ const Navbar = () => {
           <li onClick={handleClickTres}>
             Series <span className="material-icons">expand_more</span>
             <ul className={clickTres ? "children" : "sub-menu"}>
-              <Link to="/productos">
+            <Link to="/todo_en_series">
                 <li className="sub-li">Ver todo</li>
               </Link>
-              <Link to="/accion">
-                <li className="sub-li">Accion</li>
+              <Link to="/en_emision">
+                <li className="sub-li">Se emiten hoy</li>
               </Link>
-              <Link to="/sweaters">
-                <li className="sub-li">Comedias</li>
+              <Link to="/en_televison">
+                <li className="sub-li">En television</li>
               </Link>
-              <Link to="/pantalones">
-                <li className="sub-li">Dramas</li>
-              </Link>
-              <Link to="/vestidos">
-                <li className="sub-li">Terror</li>
+              <Link to="/mas_valoradas=series">
+                <li className="sub-li">Mas valoradas</li>
               </Link>
             </ul>
           </li>
           <li>
-            <Link to="/contacto">Mejor votadas</Link>
+            <Link to="/mas_vistas">Películas mas vistas</Link>
           </li>
         </ul>
 

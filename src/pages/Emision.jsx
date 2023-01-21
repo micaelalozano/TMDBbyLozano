@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import HeroVideo2 from "../components/HeroVideo2";
 import Navbar from "../components/Navbar";
+import HeroSeries from "../components/HeroSeries";
 //Estilos
-import "../estilos/explorar.css";
+import "../estilos/heroVotadas.css";
 
-//API KEY : 376830c4b1497d750fd04c4edae8fe3c
-
-const Explorar = () => {
-  const [movies, setMovies] = useState([]);
+const Emision = () => {
+  const [series, setSeries] = useState([]);
 
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/discover/movie?api_key=376830c4b1497d750fd04c4edae8fe3c&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
+        "https://api.themoviedb.org/3/tv/on_the_air?api_key=376830c4b1497d750fd04c4edae8fe3c&language=en-US&page=1"
       )
       .then((data) => {
-        setMovies(data.data.results);
+        setSeries(data.data.results);
         console.log(data.data.results);
       });
   }, []);
@@ -25,10 +23,10 @@ const Explorar = () => {
   return (
     <>
       <Navbar />
-      <HeroVideo2 />
+      <HeroSeries heading="EN EMISION HOY" />
       <ul>
-        <div className="card-container">
-          {movies.map(function (e, i) {
+        <div className="card-container-vot">
+          {series.map(function (e, i) {
             return (
               <li key={i}>
                 <Link to={"/ver_detalle/" + e.id}>
@@ -40,8 +38,8 @@ const Explorar = () => {
                       }
                       alt="Poster Pelicula"
                     />
-                    <p className="movie-title"> {e.original_title} </p>
-                  </div>{" "}
+                    <p className="movievot-title"> {e.name} </p>
+                  </div>
                 </Link>
               </li>
             );
@@ -52,4 +50,4 @@ const Explorar = () => {
   );
 };
 
-export default Explorar;
+export default Emision;

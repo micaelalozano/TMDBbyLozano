@@ -45,7 +45,7 @@ const Login = () => {
       .post("/api/users/login", { username, password }, { withCredentials: true })
       .then((res) => res.data)
       .then(() => {
-        navigate("/explorar");
+        navigate("/browse");
       })
       .catch((err) => {
         window.alert("El usuario es incorrecto o no esta registrado");

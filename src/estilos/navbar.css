@@ -81,6 +81,7 @@
   background-color: rgba(34, 34, 34, 0.479);
   border-bottom: 2.5px solid white;
   border-top: 2.5px solid white;
+  z-index: 2;
 }
 
 .children .sub-li {
@@ -153,7 +154,7 @@
 
 .close-perfil {
   margin-top: 10px;
-  margin-right: 5px;
+  margin-right: 10px;
   float: right;
   cursor: pointer;
 }

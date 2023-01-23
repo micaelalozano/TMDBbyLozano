@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import HeroVideo2 from "../components/HeroVideo2";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 //Estilos
 import "../estilos/explorar.css";
 
@@ -48,6 +49,7 @@ const Explorar = () => {
           })}
         </div>
       </ul>
+      <Footer />
     </>
   );
 };

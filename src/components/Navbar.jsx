@@ -103,7 +103,7 @@ const Navbar = () => {
           <li onClick={handleClickTres}>
             Series <span className="material-icons">expand_more</span>
             <ul className={clickTres ? "children" : "sub-menu"}>
-            <Link to="/todo_en_series">
+              <Link to="/todo_en_series">
                 <li className="sub-li">Ver todo</li>
               </Link>
               <Link to="/en_emision">
@@ -129,10 +129,12 @@ const Navbar = () => {
                 {logged.map(function (e, i) {
                   return (
                     <li key={i}>
-                      <FavoriteBorderIcon
-                        className="nav-icon"
-                        sx={{ fontSize: 20 }}
-                      />
+                      <Link to="/mis_favoritos">
+                        <FavoriteBorderIcon
+                          className="nav-icon"
+                          sx={{ fontSize: 20 }}
+                        />
+                      </Link>
                       <img
                         onClick={handleClick4}
                         className="foto-perfil"

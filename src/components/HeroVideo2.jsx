@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 //Estilos
 import "../estilos/heroVideo2.css";
 import elvis from "../assets/elvis.mp4";
@@ -18,18 +18,18 @@ const HeroVideo2 = () => {
             La historia de Elvis se cuenta desde la óptica de su complicada
             relación con su enigmático representante,el coronel Tom Parker.
           </p>
-          <form className="form-search" action="">
-            <input
-              className="search-input"
-              type="text"
-              placeholder="Qué quieres ver?"
-            />
-            <button className="btn-search">
-              <SearchIcon sx={{ fontSize: 20 }} className="search-icon" />
-            </button>
-          </form>
-
-          <div></div>
+          <Link to="/search">
+            <form className="form-search">
+              <input
+                className="search-input"
+                type="search"
+                placeholder="Qué quieres ver?"
+              />
+              <button className="btn-search">
+                <SearchIcon sx={{ fontSize: 20 }} className="search-icon" />
+              </button>
+            </form>
+          </Link>
         </div>
       </div>
     </>

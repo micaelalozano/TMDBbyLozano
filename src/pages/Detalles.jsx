@@ -34,16 +34,33 @@ const Detalles = () => {
         <div className="detail-contenedor">
           <div className="left-detail">
             <img
+              className="poster-left"
               src={"https://www.themoviedb.org/t/p/w300" + movie.poster_path}
               alt=""
             />
           </div>
           <div className="right-detail">
-              <p>hola</p>
-              <p>hola</p>
-              <p>hola</p>
-              <p>hola</p>
-              <p>hola</p>
+            <div className="div-title">
+              <h1 className="movie-tit"> {movie.title} </h1>
+              <span className="material-fav">favorite</span>
+            </div>
+            <p className="date"> {movie.release_date} </p>
+            <ul>
+              <div className="div-generos">
+                {movie.genres?.map(function (e, i) {
+                  return (
+                    <li key={i}>
+                      <p className="genero">{e.name}</p>
+                    </li>
+                  );
+                })}
+              </div>
+            </ul>
+            <p className="overview"> {movie.overview} </p>
+            <p className="vote">
+              <span className="material-star">star</span>
+              {movie.vote_average}
+            </p>
           </div>
         </div>
       </div>

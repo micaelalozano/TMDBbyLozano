@@ -1,11 +1,10 @@
 .card-container {
-  margin-top: -1em;
   padding: 0em 2em;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 15px;
   text-align: center;
-  position: absolute;
+  margin-bottom: 4em;
 }
 
 .card {

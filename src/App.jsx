@@ -17,6 +17,9 @@ import Emision from "./pages/Emision";
 import EnTv from "./pages/EnTv";
 import SeriesMasValoradas from "./pages/SeriesMasValoradas";
 import Detalles from "./pages/Detalles";
+import SeriesDetails from "./pages/SeriesDetails";
+import Search from "./pages/Search";
+import Favoritos from "./pages/Favoritos";
 
 const App = () => {
   const [user, setUser] = useState({});
@@ -47,11 +50,14 @@ const App = () => {
         <Route path="/en_televison" element={<EnTv />} />
         <Route path="/mas_valoradas=series" element={<SeriesMasValoradas />} />
         <Route path="/ver_detalle/:movie_id" element={<Detalles />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/ver_detalle=series/:serie_id" element={<SeriesDetails />}/>
+        <Route path="/ver_detalle=series/:serie_id" element={<SeriesDetails />}/>
+        <Route path="/search" element={<Search />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/mi_cuenta/:username" element={<Micuenta />} />
         <Route path="/cambiar_foto_perfil/:user_id" element={<Miperfil />} />
+        <Route path="/mis_favoritos" element={<Favoritos />} />
       </Routes>
     </>
   );

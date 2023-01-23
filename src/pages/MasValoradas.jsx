@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import HeroVotadas from "../components/HeroVotadas";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 //Estilos
 import "../estilos/heroVotadas.css";
 const MasValoradas = () => {
@@ -45,6 +46,7 @@ const MasValoradas = () => {
           })}
         </div>
       </ul>
+      <Footer />
     </>
   );
 };

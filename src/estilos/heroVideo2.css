@@ -44,7 +44,7 @@
 }
 
 .search-icon {
-  margin-top: 2px;
+  padding-top: 4px;
   color: ivory;
 }
 
@@ -143,11 +143,8 @@
   }
 
   .search-input {
+    width: 60%;
     font-size: 13px;
     padding: 0px 5px;
-  }
-
-  .search-input {
-    width: 60%;
   }
 }

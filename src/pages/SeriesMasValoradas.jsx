@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import HeroSeries from "../components/HeroSeries";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 //Estilos
 import "../estilos/heroVotadas.css";
 
@@ -29,7 +30,7 @@ const SeriesMasValoradas = () => {
           {series.map(function (e, i) {
             return (
               <li key={i}>
-                <Link to={"/ver_detalle/" + e.id}>
+                <Link to={"/ver_detalle=series/" + e.id}>
                   <div className="card">
                     <img
                       className="img-card"
@@ -46,6 +47,7 @@ const SeriesMasValoradas = () => {
           })}
         </div>
       </ul>
+      <Footer />
     </>
   );
 };

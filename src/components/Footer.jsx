@@ -11,21 +11,23 @@ const Footer = () => {
     <>
       <div className="cont-footer">
         <div>
-          <h4 className="h4">© Micaela Lozano {new Date().getFullYear()}</h4>
+          <h4 className="h4-name">© Micaela Lozano {new Date().getFullYear()}</h4>
         </div>
+        <div className="div-mail">
+        <p className="me"> micaelalozano95@gmail.com</p>
         <ul className="contenedor-icons">
-          <li className="me"> micaelalozano95@gmail.com</li>
-          <li className="lis">
+          <li className="li">
             <Link href="https://www.linkedin.com/in/micaela-lozano16/">
-              <LinkedInIcon className="link" sx={{ fontSize: 29 }} />
+              <LinkedInIcon className="link" sx={{ fontSize: 28 }} />
             </Link>
           </li>
-          <li className="lis">
+          <li className="li">
             <Link href="https://github.com/micaelalozano">
-              <GitHubIcon className="git" sx={{ fontSize: 27 }} />
+              <GitHubIcon className="git"/>
             </Link>
           </li>
         </ul>
+        </div>
       </div>
     </>
   );

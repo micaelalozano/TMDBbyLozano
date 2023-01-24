@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 import { FaBars, FaTimes } from "react-icons/fa";
 //Estilos
 import "../estilos/navDos.css";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import SearchIcon from "@mui/icons-material/Search";
 import LoginIcon from "@mui/icons-material/Login";
 
 const Navbar = () => {
   const [user, setUser] = useState({});
   const [logged, setLogged] = useState([]);
+  const navigate = useNavigate();
+
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
@@ -48,6 +51,7 @@ const Navbar = () => {
       .then((res) => res.data)
       .then((user) => {
         setUser(user);
+        navigate("/browse");
       });
   };
 
@@ -118,8 +122,8 @@ const Navbar = () => {
                 {logged.map(function (e, i) {
                   return (
                     <li key={i}>
-                      <Link to="/mis_favoritos">
-                        <FavoriteBorderIcon
+                      <Link to="/search">
+                        <SearchIcon
                           className="nav-icon"
                           sx={{ fontSize: 20 }}
                         />
@@ -130,7 +134,7 @@ const Navbar = () => {
                         src={
                           e.imagen
                             ? e.imagen
-                            : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                            : "https://thinktecno.com/wp-content/uploads/2022/06/Como-quitar-la-foto-de-perfil-en-Facebook-sin-borrar.png"
                         }
                         alt="Foto de perfil"
                       />{" "}
@@ -159,7 +163,9 @@ const Navbar = () => {
         ) : (
           <>
             <div className="nav-login">
-              <FavoriteBorderIcon className="nav-icon" sx={{ fontSize: 20 }} />
+              <Link to="/search">
+                <SearchIcon className="nav-icon" sx={{ fontSize: 20 }} />
+              </Link>
               <Link to="/login">
                 <LoginIcon className="nav-icon" sx={{ fontSize: 20 }} />
               </Link>

@@ -43,6 +43,7 @@ const Search = () => {
               type="search"
               placeholder="Qué quieres ver?"
               {...search}
+              autoFocus
             />
             <button className="btn-search-dos">
               <SearchIcon sx={{ fontSize: 20 }} className="search-icon" />

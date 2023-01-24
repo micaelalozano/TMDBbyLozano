@@ -1,5 +1,5 @@
 .cont-footer {
-  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,25 +54,15 @@
 }
 
 @media screen and (max-width: 670px) {
-  .contenedor-foot {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .div-mail {
-    flex-direction: column;
-  }
-
-  .contenedor-icons .li {
-    margin-top: 5px;
+  .h4-name {
+    font-size: 15px;
   }
 
   .me {
-    margin-top: 10px;
+    display: none;
   }
 
   .h4-name {
-    font-size: 15px;
+    font-size: 14px;
   }
 }

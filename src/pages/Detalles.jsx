@@ -8,33 +8,6 @@ import "../estilos/detalles.css";
 const Detalles = () => {
   const { movie_id } = useParams();
   const [movie, setMovie] = useState([]);
-  const [user, setUser] = useState("");
-  const [logged, setLogged] = useState("");
-  const [isFavorito, setIsFavorito] = useState([]);
-
-  //use log
-
-  useEffect(() => {
-    axios
-      .get("/api/users/ruta/perfil")
-      .then((res) => res.data)
-      .then((user) => {
-        setUser(user);
-      });
-  }, []);
-
-//
-
-useEffect(() => {
-  axios
-    .get(`/api/users/${user.username}`)
-    .then((res) => res.data)
-    .then((user) => {
-      setLogged(user);
-    });
-}, [user.username]);
-
-console.log(logged);
 
   useEffect(() => {
     axios
@@ -46,28 +19,6 @@ console.log(logged);
         setMovie(pelicula);
       });
   }, [movie_id]);
-
-  //Agregar a favoritos:
-  const addFav = (movieId) => {
-    if (!user.name) {
-      window.alert("Necesitas loguearte");
-      return;
-    }
-    axios
-      .post("/api/favoritos", {
-        movieId: movieId,
-        userId: logged.id,
-      })
-      .then(() => {
-        window.alert("Agregado a Favs!");
-        return axios.get(`/api/favoritos/${logged.id}`);
-      })
-      .then((res) => res.data)
-      .then((data) => setIsFavorito(data))
-      .catch(() => alert("Se ha producido un error"));
-  };
-console.log(logged.id);
-  console.log(movie);
 
   return (
     <>
@@ -89,9 +40,6 @@ console.log(logged.id);
           <div className="right-detail">
             <div className="div-title">
               <h1 className="movie-tit"> {movie.title} </h1>
-              <span className="material-fav" onClick={() => addFav(movie.id)}>
-                favorite
-              </span>
             </div>
             <p className="date"> {movie.release_date} </p>
             <ul>

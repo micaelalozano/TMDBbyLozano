@@ -19,7 +19,6 @@ import SeriesMasValoradas from "./pages/SeriesMasValoradas";
 import Detalles from "./pages/Detalles";
 import SeriesDetails from "./pages/SeriesDetails";
 import Search from "./pages/Search";
-import Favoritos from "./pages/Favoritos";
 
 const App = () => {
   const [user, setUser] = useState({});
@@ -57,7 +56,6 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/mi_cuenta/:username" element={<Micuenta />} />
         <Route path="/cambiar_foto_perfil/:user_id" element={<Miperfil />} />
-        <Route path="/mis_favoritos" element={<Favoritos />} />
       </Routes>
     </>
   );

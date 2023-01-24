@@ -9,10 +9,31 @@
 
 .card {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "Ver Descripción";
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.405);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform: translateY(100%);
+  transition: transform .3s;
+}
+
+.card:hover::after {
+  transform: translateY(0);
 }
 
 .img-card {
   width: 100%;
+  filter: saturate(130%)
 }
 
 .movie-title {

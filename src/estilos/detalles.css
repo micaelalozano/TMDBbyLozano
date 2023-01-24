@@ -1,7 +1,7 @@
 .todo-contenedor {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
 
 .todo-contenedor::after {
@@ -17,6 +17,7 @@
 .fondo-detail {
   width: 100%;
   height: 100%;
+  filter: saturate(130%)
 }
 
 .detail-contenedor {
@@ -48,7 +49,7 @@
 }
 
 .poster-left {
-  height: 90%;
+  height: 95%;
   width: 50%;
   border-radius: 15px;
 }
@@ -144,6 +145,12 @@
     border-bottom: none;
   }
 
+  .poster-left {
+    height: 95%;
+    width: 60%;
+    border-radius: 15px;
+  }
+
   .right-detail {
     margin: auto;
     max-width: 100%;
@@ -164,7 +171,6 @@
     font-size: 25px;
     text-align: center;
     margin-bottom: 5px;
-    padding-left: 1em;
   }
 
   .material-fav {
@@ -188,6 +194,7 @@
   }
 
   .div-title {
+    justify-content: none;
     margin-top: 0px;
   }
 

@@ -42,7 +42,6 @@ const SeriesDetails = () => {
           <div className="right-detail">
             <div className="div-title">
               <h1 className="movie-tit"> {series.original_name} </h1>
-              <span className="material-fav">favorite</span>
             </div>
             <p className="date"> {series.release_date} </p>
             <ul>

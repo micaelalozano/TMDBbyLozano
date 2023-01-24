@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 //Estilos
 import "../estilos/footer.css";
 //Iconos
@@ -17,14 +16,14 @@ const Footer = () => {
         <p className="me"> micaelalozano95@gmail.com</p>
         <ul className="contenedor-icons">
           <li className="li">
-            <Link href="https://www.linkedin.com/in/micaela-lozano16/">
+            <a href="https://www.linkedin.com/in/micaela-lozano16/">
               <LinkedInIcon className="link" sx={{ fontSize: 28 }} />
-            </Link>
+            </a>
           </li>
           <li className="li">
-            <Link href="https://github.com/micaelalozano">
+            <a href="https://github.com/micaelalozano">
               <GitHubIcon className="git"/>
-            </Link>
+            </a>
           </li>
         </ul>
         </div>

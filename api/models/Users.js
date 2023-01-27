@@ -38,7 +38,7 @@ Users.init(
       allowNull: false,
     },
     imagen: {
-      type: Sequelize.DataTypes.STRING,
+      type: Sequelize.DataTypes.TEXT,
       allowNull: true,
     },
     salt: {

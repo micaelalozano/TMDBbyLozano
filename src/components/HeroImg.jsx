@@ -37,7 +37,7 @@ const HeroImg = () => {
                         src={
                           e.imagen
                             ? e.imagen
-                            : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                            : "https://thinktecno.com/wp-content/uploads/2022/06/Como-quitar-la-foto-de-perfil-en-Facebook-sin-borrar.png"
                         }
                         alt=""
                       />

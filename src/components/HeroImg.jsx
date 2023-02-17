@@ -4,21 +4,29 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 //Estilos
 import "../estilos/heroimg.css";
+import { Spinner } from "./Spinner";
 
 const HeroImg = () => {
   const { username } = useParams();
   const [user, setUser] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   console.log(username);
 
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(`/api/users/${username}`)
       .then((res) => res.data)
       .then((user) => {
         setUser(user);
+        setIsLoading(false);
       });
   }, [username]);
+
+  if(isLoading){
+    return <Spinner/>
+  }
 
   console.log("VER!", user);
 
@@ -46,11 +54,15 @@ const HeroImg = () => {
                       <h3 className="mi_cuenta">MI CUENTA</h3>
                       <p className="mis_datos">NOMBRE: {e.name} </p>
                       <p className="mis_datos">APELLIDO: {e.lastname} </p>
-                      <p className="mis_datos">NOMBRE DE USUARIO: {e.username} </p>
+                      <p className="mis_datos">
+                        NOMBRE DE USUARIO: {e.username}{" "}
+                      </p>
                       <p className="mis_datos">CORREO ELECTRONICO: {e.email}</p>
                       <div>
                         <Link to={"/cambiar_foto_perfil/" + e.id}>
-                          <button className="btn-foto-perfil">Cambiar foto de perfil</button>
+                          <button className="btn-foto-perfil">
+                            Cambiar foto de perfil
+                          </button>
                         </Link>
                       </div>
                     </div>
@@ -66,4 +78,3 @@ const HeroImg = () => {
 };
 
 export default HeroImg;
-

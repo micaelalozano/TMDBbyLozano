@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 //Estilos
 import "../estilos/heroVotadas.css";
+
 const MasValoradas = () => {
   const [movies, setMovies] = useState([]);
 

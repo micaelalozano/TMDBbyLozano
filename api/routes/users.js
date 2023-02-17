@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
   });
 });
 
-//Buscar los usuarios por ID:
+//Buscar los usuarios por USERNAME:
 router.get("/:username", (req, res) => {
   const { username } = req.params;
 

@@ -1,7 +1,7 @@
 .spinner {
   display: flex;
   justify-content: center;
-  margin: 30em;
+  margin: 25em;
   color: white;
 }
 
@@ -19,7 +19,7 @@
   .spinner {
     display: flex;
     justify-content: center;
-    margin: 12em;
+    margin: 15em;
     color: white;
   }
 }

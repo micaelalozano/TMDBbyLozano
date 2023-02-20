@@ -81,7 +81,7 @@ const Votadas = () => {
       </ul>
       <ThemeProvider theme={theme}>
         <Pagination
-          count={10}
+          count={100}
           siblingCount={0}
           boundaryCount={2}
           page={page}

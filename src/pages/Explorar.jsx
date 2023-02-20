@@ -4,12 +4,12 @@ import axios from "axios";
 import HeroVideo2 from "../components/HeroVideo2";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Spinner } from "../components/Spinner";
 import Pagination from "@mui/material/Pagination";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 //Estilos
 import "../estilos/explorar.css";
-import { Spinner } from "../components/Spinner";
 
 //API KEY : 376830c4b1497d750fd04c4edae8fe3c
 
@@ -85,7 +85,7 @@ const Explorar = () => {
       </ul>
       <ThemeProvider theme={theme}>
         <Pagination
-          count={10}
+          count={100}
           siblingCount={0}
           boundaryCount={2}
           page={page}

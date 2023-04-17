@@ -61,7 +61,7 @@
 
 .foto-perfil {
   width: 25px;
-  height: 22px;
+  height: 25px;
   border-radius: 12px;
   margin-left: 0.5rem;
   cursor: pointer;
@@ -131,7 +131,6 @@
   top: 0;
   right: 0%;
   z-index: 0;
-  transition: 0.3s;
 }
 
 .aca {

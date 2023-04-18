@@ -92,7 +92,7 @@ const Votadas = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginBottom: "2em",
+            marginBottom: "1.5em",
           }}
         />
       </ThemeProvider>

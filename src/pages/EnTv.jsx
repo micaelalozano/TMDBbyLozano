@@ -4,22 +4,54 @@ import axios from "axios";
 import HeroSeries from "../components/HeroSeries";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Spinner } from "../components/Spinner";
+import Pagination from "@mui/material/Pagination";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { red } from "@mui/material/colors";
 //Estilos
 import "../estilos/heroVotadas.css";
 
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: red[900],
+    },
+  },
+});
+
+theme = createTheme(theme, {
+  palette: {
+    info: {
+      main: theme.palette.secondary.main,
+    },
+  },
+});
+
 const EnTv = () => {
   const [series, setSeries] = useState([]);
+  const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleChange = (e, page) => {
+    setPage(page);
+    //window.scroll(0, 0);
+  };
 
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/tv/popular?api_key=376830c4b1497d750fd04c4edae8fe3c&language=en-US&page=3"
+        `https://api.themoviedb.org/3/tv/popular?api_key=376830c4b1497d750fd04c4edae8fe3c&language=en-US&page=${page}`
       )
       .then((data) => {
         setSeries(data.data.results);
         console.log(data.data.results);
+        setIsLoading(false);
       });
-  }, []);
+  }, [page]);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <>
@@ -47,6 +79,23 @@ const EnTv = () => {
           })}
         </div>
       </ul>
+      <ThemeProvider theme={theme}>
+        <Pagination
+          count={100}
+          siblingCount={0}
+          boundaryCount={1}
+          page={page}
+          sx={{ button: { color: "#4d4a4a" } }}
+          variant="outlined"
+          color="primary"
+          onChange={handleChange}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "1.5em",
+          }}
+        />
+      </ThemeProvider>
       <Footer />
     </>
   );

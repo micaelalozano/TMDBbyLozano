@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import NavDos from "../components/NavDos";
+import { StarRating } from "baseui/rating";
 //Estilos
 import "../estilos/detalles.css";
 
@@ -25,43 +26,35 @@ const SeriesDetails = () => {
   return (
     <>
       <NavDos />
-       <div className="todo-contenedor">
+      <div className="todo-contenedor">
+        <div className="card-contenedor">
+          <div className="primer-c">
+            <img
+              className="poster-div"
+              src={"https://www.themoviedb.org/t/p/w300" + series.poster_path}
+              alt="Movie Poster"
+            />
+          </div>
+          <div className="segundo-c">
+            <h2 className="movie-titulo">{series.original_name} </h2>
+            <div className="generos">
+              <p className="p-data">{series.last_air_date} </p>
+              <p className="p-data">{series.number_of_seasons} Temporadas</p>
+              <p className="p-data">{series.number_of_episodes} Episodios</p>
+            </div>
+            <StarRating
+              numItems={10}
+              size={18}
+              value={series.vote_average}
+            />
+            <p className="overview">{series.overview} </p>
+          </div>
+        </div>
         <img
           className="fondo-detail"
           src={"https://www.themoviedb.org/t/p/w300" + series.poster_path}
           alt=""
         />
-        <div className="detail-contenedor">
-          <div className="left-detail">
-            <img
-              className="poster-left"
-              src={"https://www.themoviedb.org/t/p/w300" + series.poster_path}
-              alt=""
-            />
-          </div>
-          <div className="right-detail">
-            <div className="div-title">
-              <h1 className="movie-tit"> {series.original_name} </h1>
-            </div>
-            <p className="date"> {series.release_date} </p>
-            <ul>
-              <div className="div-generos">
-                {series.genres?.map(function (e, i) {
-                  return (
-                    <li key={i}>
-                      <p className="genero">{e.name}</p>
-                    </li>
-                  );
-                })}
-              </div>
-            </ul>
-            <p className="overview"> {series.overview} </p>
-            <p className="vote">
-              <span className="material-star">star</span>
-              {series.vote_average}
-            </p>
-          </div>
-        </div>
       </div>
     </>
   );

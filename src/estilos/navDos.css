@@ -71,8 +71,9 @@
   display: block;
   position: absolute;
   text-align: center;
-  width: 15%;
-  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+ margin-top: 10px;
   background-color: rgba(34, 34, 34, 0.767);
   border-bottom: 3px solid crimson;
   border-top: 2.5px solid crimson;
@@ -118,7 +119,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 100%;
+  max-width: 300px;
   height: 100vh;
   background-color: rgba(17, 17, 17, 0.959);
   border-left: ivory solid 2px;
@@ -213,21 +215,20 @@
     overflow: hidden;
     padding: 0.2rem 0em;
     color: white;
-    margin-left: 1em;
-    font-size: 0.9rem;
+    margin-left: 0.5em;
+    font-size: 0.85rem;
   }
 
   .cuenta-menu {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    max-width: 200px;
     height: 100vh;
     background-color: rgba(17, 17, 17, 0.959);
     border-left: ivory solid 2px;
     position: absolute;
-    top: 0;
-    right: 0%;
     z-index: 2;
     transition: 0.3s;
   }

@@ -87,7 +87,14 @@ const Navbar = () => {
           </li>
 
           <li onClick={handleClickDos}>
-            Películas <span className="material-icons">expand_more</span>
+            Películas
+            {clickDos ? (
+              <span className="material-icons">expand_less</span>
+            ) : (
+              <>
+                <span className="material-icons">expand_more</span>
+              </>
+            )}
             <ul className={clickDos ? "children" : "sub-menu"}>
               <Link to="/todo_en_peliculas">
                 <li className="sub-li">Ver todo</li>
@@ -105,7 +112,14 @@ const Navbar = () => {
           </li>
 
           <li onClick={handleClickTres}>
-            Series <span className="material-icons">expand_more</span>
+            Series
+            {clickTres ? (
+              <span className="material-icons">expand_less</span>
+            ) : (
+              <>
+                <span className="material-icons">expand_more</span>
+              </>
+            )}
             <ul className={clickTres ? "children" : "sub-menu"}>
               <Link to="/todo_en_series">
                 <li className="sub-li">Ver todo</li>
@@ -122,7 +136,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <Link to="/mas_vistas">Películas mas vistas</Link>
+            <Link to="/mas_vistas">Películas más vistas</Link>
           </li>
         </ul>
 
@@ -136,7 +150,7 @@ const Navbar = () => {
                       <Link to="/search">
                         <SearchIcon
                           className="nav-icon"
-                          sx={{ fontSize: 20 }}
+                          sx={{ fontSize: 21 }}
                         />
                       </Link>
                       <img

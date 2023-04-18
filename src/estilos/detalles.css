@@ -24,10 +24,11 @@
 
 .card-contenedor {
   display: flex;
+  flex-direction: row;
   position: absolute;
   width: 100%;
+  height: 70%;
   max-width: 65%;
-  height: 65%;
   z-index: 1;
   -webkit-box-shadow: 0px 9px 31px 5px rgba(0, 0, 0, 0.67);
   -moz-box-shadow: 0px 9px 31px 5px rgba(0, 0, 0, 0.67);
@@ -41,7 +42,7 @@
 
 .primer-c {
   width: 32%;
-  background-color: rgb(80, 34, 34);
+  background-color: rgba(17, 17, 17, 0.507);
 }
 
 .segundo-c {
@@ -49,13 +50,16 @@
   flex-direction: column;
   width: 68%;
   padding: 1.5em;
-  background-color: rgb(80, 28, 28);
+  background-color: rgba(17, 17, 17, 0.507);
 }
 
 .movie-titulo {
   text-transform: uppercase;
   margin-bottom: 10px;
   font-size: 35px;
+  color: rgb(226, 226, 226);
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
 }
 
 .generos {
@@ -68,48 +72,86 @@
   margin-right: 35px;
   font-size: 15px;
   margin-bottom: 10px;
-  color: gray;
+  color: rgb(146, 145, 145);
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
 }
 
 .overview {
   margin-top: 15px;
+  color: rgba(255, 255, 255, 0.836);
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
 }
 
-@media screen and (max-width: 1400px) {
-  .card-contenedor {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    max-width: 80%;
-    height: 65%;
-  }
-}
-
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1300px) {
   .todo-contenedor {
     height: 100vh;
   }
 
   .card-contenedor {
-    flex-direction: column;
-    background-color: transparent;
+    flex-direction: row;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    width: 100%;
+    max-width: 80%;
   }
 
   .primer-c {
-    width: 100%;
-    height: 70%;
-    background-color: rgb(80, 34, 34);
+    width: 40%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card-contenedor {
+    flex-direction: row;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    max-width: 95%;
+  }
+
+  .primer-c {
+    width: 40%;
+    height: 100%;
   }
 
   .segundo-c {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
     padding: 1.5em;
-    background-color: rgb(80, 28, 28);
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .todo-contenedor {
+    height: 110vh;
+  }
+
+  .card-contenedor {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    max-width: none;
+  }
+
+  .primer-c {
+    width: 100%;
+    height: 45%;
+  }
+
+  .segundo-c {
+    width: 100%;
+    height: 55%;
+  }
+
+  .overview {
+    font-size: 15px;
   }
 }

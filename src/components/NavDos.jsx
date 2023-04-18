@@ -76,7 +76,14 @@ const Navbar = () => {
           </li>
 
           <li onClick={handleClickDos}>
-            Películas <span className="material-icons">expand_more</span>
+            Películas
+            {clickDos ? (
+              <span className="material-icons">expand_less</span>
+            ) : (
+              <>
+                <span className="material-icons">expand_more</span>
+              </>
+            )}
             <ul className={clickDos ? "children-dos" : "sub-menu"}>
               <Link to="/todo_en_peliculas">
                 <li className="sub-li-dos">Ver todo</li>
@@ -94,7 +101,14 @@ const Navbar = () => {
           </li>
 
           <li onClick={handleClickTres}>
-            Series <span className="material-icons">expand_more</span>
+            Series
+            {clickTres ? (
+              <span className="material-icons">expand_less</span>
+            ) : (
+              <>
+                <span className="material-icons">expand_more</span>
+              </>
+            )}
             <ul className={clickTres ? "children-dos" : "sub-menu"}>
               <Link to="/todo_en_series">
                 <li className="sub-li-dos">Ver todo</li>
@@ -111,7 +125,7 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <Link to="/mas_vistas">Películas mas vistas</Link>
+            <Link to="/mas_vistas">Películas más vistas</Link>
           </li>
         </ul>
 

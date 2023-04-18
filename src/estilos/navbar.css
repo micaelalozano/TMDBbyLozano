@@ -20,6 +20,8 @@
 
 .logo {
   color: crimson;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
   padding-right: 0.5rem;
 }
 
@@ -59,10 +61,10 @@
   transition: all 0.2s ease;
 }
 
-.foto-perfil {
-  width: 25px;
-  height: 25px;
-  border-radius: 12px;
+.nav-login .foto-perfil {
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
   margin-left: 0.5rem;
   cursor: pointer;
 }
@@ -76,7 +78,8 @@
   display: block;
   position: absolute;
   text-align: center;
-  width: 15%;
+  width: 100%;
+  max-width: 200px;
   margin-top: 10px;
   background-color: rgba(34, 34, 34, 0.479);
   border-bottom: 2.5px solid white;
@@ -205,7 +208,7 @@
     display: block;
     position: relative;
     text-align: left;
-    width: 100%;
+    max-width: 100%;
     margin-top: 10px;
     background-color: #222;
     border-bottom: 2.5px solid white;
@@ -218,7 +221,8 @@
     padding: 0.2rem 0em;
     color: white;
     margin-left: 1em;
-    font-size: 0.9rem;
+    margin-left: 0.5em;
+    font-size: 0.85rem;
   }
 
   .cuenta-menu {

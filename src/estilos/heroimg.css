@@ -1,105 +1,112 @@
 .hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  background: rgba(0, 0, 0, 0.041);
-  height: 100vh;
+  height: 82vh;
   position: relative;
 }
 
 .hero-img::after {
   content: "";
-  background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDw0NDQ8NDQ0NDQ0NDQ0NDQ8NDw0NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0PEisZFRkrKysrKysrKysrKystKysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKwBJgMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAIhABAQACAAQHAAAAAAAAAAAAAAERIQJBgfEiMVFhcbHw/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO4gAAAlvlrr6KAAAAJICgAAAAAAAAAAAAAAAM8XFZeHEtluLczw6tzfrq0AAAAAAAAAAAAAAAAAAAAAAAAAAAAACZ7qAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJfZQAAAAAgAAAAAAAAAAAAAAAAAACfvlQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAJYCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAARQAAAAAAAAAAAAEwoAAAACSqAAAAAAAAAAAAAAAAAAAAAAAAAAAAACXPLW5yzrKgAAAAAAAAAAAAAAAmFAAAAAAAABKoAAAAA//Z");
-  background-size: cover;
-  background-position: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  backdrop-filter: blur(50px);
 }
 
-.hero-img .content {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  width: 40%;
-  -webkit-box-shadow: 15px 15px 17px -6px rgba(143, 137, 143, 1);
-  -moz-box-shadow: 15px 15px 17px -6px rgba(143, 137, 143, 1);
-  box-shadow: 15px 15px 17px -6px rgba(143, 137, 143, 1);
-}
-
-.left-detalle {
-  width: 100%;
-  max-width: 100%;
+.contenedor-general {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  max-width: 60%;
+  max-height: 60%;
+  -webkit-box-shadow: 0px 9px 31px 5px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 9px 31px 5px rgba(0, 0, 0, 0.67);
+  box-shadow: 0px 9px 31px 5px rgba(0, 0, 0, 0.67);
+  position: absolute;
+  z-index: 1;
 }
 
-.img1 {
+.profile-pic {
+  width: 40%;
+  position: relative;
+}
+
+.pic {
+  width: 100%;
   height: 100%;
-  width: 100%;
-  border-top: 4px solid crimson;
-  border-bottom: 4px solid crimson;
 }
 
-.right-detalle {
-  padding: 1em;
-  width: 100%;
-  max-width: 100%;
+.change-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #222;
+  border: none;
+  margin: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+}
+
+.profile-data {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  padding: 2em;
   background-color: #222;
-  border-bottom: 4px solid crimson;
+  width: 60%;
 }
 
 .mi_cuenta {
-  margin-bottom: 20px;
-  color: grey;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.836);
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
 }
 
 .mis_datos {
-  padding-bottom: 20px;
-  font-size: 14px;
-  color: rgba(255, 255, 240, 0.726);
+  font-size: 14.5px;
+  margin-bottom: 10px;
   font-weight: 500;
-}
-
-.btn-foto-perfil {
-  border: none;
-  padding: 0.5em;
-  font-size: 13px;
-  background-color: rgba(255, 255, 240, 0.212);
-  border-top: 1px solid ivory;
-  border-bottom: 1px solid ivory;
-  color: ivory;
-  cursor: pointer;
-}
-
-.btn-foto-perfil:hover {
-  border: none;
-  padding: 0.5em;
-  font-size: 13px;
-  background-color: rgba(255, 255, 240, 0.212);
-  border-top: 1px solid crimson;
-  border-bottom: 1px solid crimson;
-  color: ivory;
+  color: gray;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
 }
 
 @media screen and (max-width: 740px) {
-  .hero-img .content {
-    width: 80%;
+  .hero-img {
+    height: 85vh;
   }
 
-  .mi_cuenta {
-    margin-bottom: 20px;
-    color: grey;
+  .contenedor-general {
+    flex-direction: column;
+    max-width: 80%;
+    max-height: 95%;
+  }
+
+  .profile-pic {
+    width: 100%;
+  }
+
+  .profile-data {
+    text-align: center;
+    padding: 1em;
+    background-color: #222;
+    width: 100%;
+    height: fit-content;
   }
 
   .mis_datos {
-    font-size: 0.8rem;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .mi_cuenta {
+   font-size: 20px;
   }
 }

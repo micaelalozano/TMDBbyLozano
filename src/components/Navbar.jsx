@@ -189,7 +189,7 @@ const Navbar = () => {
           <>
             <div className="nav-login">
               <Link to="/search">
-                <SearchIcon className="nav-icon" sx={{ fontSize: 20 }} />
+                <SearchIcon className="nav-icon" sx={{ fontSize: 21 }} />
               </Link>
               <Link to="/login">
                 <LoginIcon className="nav-icon" sx={{ fontSize: 20 }} />

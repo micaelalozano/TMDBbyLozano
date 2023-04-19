@@ -154,4 +154,9 @@
   .overview {
     font-size: 15px;
   }
+
+  .generos {
+    display: flex;
+    flex-direction: column;
+  }
 }

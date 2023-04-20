@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Spinner } from "./Spinner";
-import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';//Estilos
+import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined"; //Estilos
 import "../estilos/heroimg.css";
 
 const HeroImg = () => {
@@ -44,7 +44,15 @@ const HeroImg = () => {
                     </button>
                   </Link>
 
-                  <img src={e.imagen} alt="Foto de perfil" className="pic" />
+                  <img
+                    src={
+                      e.imagen
+                        ? e.imagen
+                        : "https://www.softzone.es/app/uploads-softzone.es/2018/04/guest.png"
+                    }
+                    alt="Foto de perfil"
+                    className="pic"
+                  />
                 </div>
                 <div className="profile-data">
                   <h2 className="mi_cuenta">MI CUENTA</h2>
@@ -54,7 +62,15 @@ const HeroImg = () => {
                   <p className="mis_datos">CORREO ELECTRONICO: {e.email}</p>
                 </div>
               </li>
-              <img className="fondo-detail" src={e.imagen} alt="Fondo" />
+              <img
+                className="fondo-detail"
+                src={
+                  e.imagen
+                    ? e.imagen
+                    : "https://www.softzone.es/app/uploads-softzone.es/2018/04/guest.png"
+                }
+                alt="Fondo"
+              />
             </div>
           );
         })}

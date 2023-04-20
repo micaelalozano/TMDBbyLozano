@@ -127,7 +127,7 @@
 
 @media screen and (max-width: 740px) {
   .todo-contenedor {
-    height: 110vh;
+    height: 120vh;
   }
 
   .card-contenedor {
@@ -143,12 +143,12 @@
 
   .primer-c {
     width: 100%;
-    height: 45%;
+    height: fit-content;
   }
 
   .segundo-c {
     width: 100%;
-    height: 55%;
+    height: fit-content;
   }
 
   .overview {

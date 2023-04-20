@@ -80,13 +80,13 @@
 
 @media screen and (max-width: 740px) {
   .hero-img {
-    height: 85vh;
+    height: 100vh;
   }
 
   .contenedor-general {
     flex-direction: column;
-    max-width: 80%;
-    max-height: 95%;
+    max-width: 90%;
+    max-height: 90%;
   }
 
   .profile-pic {
@@ -107,6 +107,6 @@
   }
 
   .mi_cuenta {
-   font-size: 20px;
+    font-size: 20px;
   }
 }

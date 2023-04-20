@@ -148,7 +148,7 @@ const Navbar = () => {
                         src={
                           e.imagen
                             ? e.imagen
-                            : "https://thinktecno.com/wp-content/uploads/2022/06/Como-quitar-la-foto-de-perfil-en-Facebook-sin-borrar.png"
+                            : "https://www.softzone.es/app/uploads-softzone.es/2018/04/guest.png"
                         }
                         alt="Foto de perfil"
                       />{" "}

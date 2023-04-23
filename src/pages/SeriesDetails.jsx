@@ -3,12 +3,14 @@ import axios from "axios";
 import { useParams } from "react-router";
 import NavDos from "../components/NavDos";
 import { StarRating } from "baseui/rating";
+import { Spinner } from "../components/Spinner";
 //Estilos
 import "../estilos/detalles.css";
 
 const SeriesDetails = () => {
   const { serie_id } = useParams();
   const [series, setSeries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -18,10 +20,13 @@ const SeriesDetails = () => {
       .then((res) => res.data)
       .then((pelicula) => {
         setSeries(pelicula);
+        setIsLoading(false);
       });
   }, [serie_id]);
 
-  console.log(series);
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <>

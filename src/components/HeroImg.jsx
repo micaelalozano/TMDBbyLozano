@@ -16,7 +16,19 @@ const HeroImg = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`/api/users/${username}`)
+      .get(
+        `https://tmdb-bylozano.onrender.com/api/users/${username}`,
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then((user) => {
         setUser(user);

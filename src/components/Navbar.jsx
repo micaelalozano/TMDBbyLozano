@@ -38,7 +38,19 @@ const Navbar = () => {
 
   useEffect(() => {
     axios
-      .get("/api/users/ruta/perfil")
+      .get(
+        "https://tmdb-bylozano.onrender.com/api/users/ruta/perfil",
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then((user) => {
         setUser(user);
@@ -47,7 +59,19 @@ const Navbar = () => {
 
   useEffect(() => {
     axios
-      .get(`/api/users/${user.username}`)
+      .get(
+        `https://tmdb-bylozano.onrender.com/api/users/${user.username}`,
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then((user) => {
         setLogged(user);
@@ -58,7 +82,19 @@ const Navbar = () => {
 
   const handleLogout = () => {
     axios
-      .post("/api/users/logout")
+      .post(
+        "https://tmdb-bylozano.onrender.com/api/users/logout",
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then((user) => {
         setUser(user);

@@ -45,7 +45,6 @@ const Proximamente = () => {
       )
       .then((data) => {
         setMovies(data.data.results);
-        console.log(data.data.results);
         setIsLoading(false);
       });
   }, [page]);

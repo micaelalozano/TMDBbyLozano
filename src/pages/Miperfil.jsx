@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -16,7 +16,19 @@ const Miperfil = () => {
 
   useEffect(() => {
     axios
-      .get("/api/users/ruta/perfil")
+      .get(
+        "https://tmdb-bylozano.onrender.com/api/users/ruta/perfil",
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then((user) => {
         setLogged(user);
@@ -26,7 +38,20 @@ const Miperfil = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`/api/users/${user_id}`, { imagen }, { withCredentials: true })
+      .put(
+        `https://tmdb-bylozano.onrender.com/api/users/${user_id}`,
+        { imagen },
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then((data) => {
         navigate("/mi_cuenta/" + logged.username);
@@ -57,7 +82,9 @@ const Miperfil = () => {
                 />
               </div>
               <Link>
-              <button className="btn-aceptar" onClick={handleSubmit}>ACEPTAR</button>
+                <button className="btn-aceptar" onClick={handleSubmit}>
+                  ACEPTAR
+                </button>
               </Link>
             </div>
           </form>

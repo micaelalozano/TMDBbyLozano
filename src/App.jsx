@@ -25,7 +25,19 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("/api/users/ruta/me")
+      .get(
+        "https://tmdb-bylozano.onrender.com/api/users/ruta/me",
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then((user) => {
         console.log(user);
@@ -49,8 +61,14 @@ const App = () => {
         <Route path="/en_televison" element={<EnTv />} />
         <Route path="/mas_valoradas=series" element={<SeriesMasValoradas />} />
         <Route path="/ver_detalle/:movie_id" element={<Detalles />} />
-        <Route path="/ver_detalle=series/:serie_id" element={<SeriesDetails />}/>
-        <Route path="/ver_detalle=series/:serie_id" element={<SeriesDetails />}/>
+        <Route
+          path="/ver_detalle=series/:serie_id"
+          element={<SeriesDetails />}
+        />
+        <Route
+          path="/ver_detalle=series/:serie_id"
+          element={<SeriesDetails />}
+        />
         <Route path="/search" element={<Search />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

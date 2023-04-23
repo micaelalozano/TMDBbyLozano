@@ -46,14 +46,27 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("api/users", {
-        username: username,
-        name: name,
-        lastname: lastname,
-        email: email,
-        password: password,
-        imagen: imagen,
-      })
+      .post(
+        "https://tmdb-bylozano.onrender.com/api/users",
+        {
+          username: username,
+          name: name,
+          lastname: lastname,
+          email: email,
+          password: password,
+          imagen: imagen,
+        },
+        {
+          withCredentials: true,
+          credentials: "include",
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "https://tmdb-by-micaelalozano.vercel.app/",
+          },
+        }
+      )
       .then((res) => res.data)
       .then(() => {
         navigate("/login");
@@ -72,7 +85,8 @@ const Register = () => {
             sm={4}
             md={7}
             sx={{
-              backgroundImage: "url(https://d500.epimg.net/cincodias/imagenes/2020/12/31/lifestyle/1609408585_467254_1609408795_noticia_normal.jpg)",
+              backgroundImage:
+                "url(https://d500.epimg.net/cincodias/imagenes/2020/12/31/lifestyle/1609408585_467254_1609408795_noticia_normal.jpg)",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"

@@ -61,8 +61,6 @@ const Miperfil = () => {
       });
   };
 
-  //user por id
-
   return (
     <>
       <div className="mi-fotoperfil">
